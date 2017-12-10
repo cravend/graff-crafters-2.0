@@ -1,0 +1,42 @@
+# Required GitHub Pages Settings
+lsi:                  false
+safe:                 true
+incremental:          false
+highlighter:          rouge
+gist:
+  noscript:           false
+kramdown:
+  math_engine:        mathjax
+  syntax_highlighter: rouge
+
+# Optional GitHub Pages Settings
+encoding:             UTF-8
+kramdown:
+  input:              GFM
+  hard_wrap:          false
+future:               true
+jailed:               false
+gfm_quirks:           paragraph_end
+title:                Graff Crafters
+email:                thegraffcrafters@gmail.com
+description:          >- # this means to ignore newlines until "baseurl:"
+  We are here to create artwork in everything we do where God's beauty,
+  love, and power are radiated. While we are broken people, we serve a
+  whole and ultimate God.
+
+baseurl:              "" # the subpath of your site, e.g. /blog
+url:                  "http://localhost:4000" # the base hostname & protocol for your site
+markdown:             kramdown
+sass:
+  style: :compressed
+
+plugins:
+- jekyll-coffeescript
+- jekyll-gist
+- jekyll-github-metadata
+- jekyll-paginate
+- jekyll-relative-links
+- jekyll-optional-front-matter
+- jekyll-readme-index
+- jekyll-default-layout
+- jekyll-titles-from-headings
