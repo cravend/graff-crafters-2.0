@@ -1,0 +1,13 @@
+# main links
+main:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Projects
+    url: /projects
+    sub:
+      - title: "project1"
+        url: a1
+      - title: "project2"
+        url: b2
