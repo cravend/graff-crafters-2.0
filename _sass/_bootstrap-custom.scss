@@ -3,8 +3,16 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
 // Core variables and mixins
+
+$btn-graff-color:                #0e1d33 !default;
+$btn-graff-bg:                   #89C3C7 !default;
+$btn-graff-border:               #0e1d33 !default;
+
+$btn-graff-dark-color:           #ecf0f1 !default;
+$btn-graff-dark-bg:              #0e1d33 !default;
+$btn-graff-dark-border:          #89C3C7 !default;
+
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 

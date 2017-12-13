@@ -87,6 +87,12 @@ a.btn {
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
+.btn-graff {
+  @include button-variant($btn-graff-color, $btn-graff-bg, $btn-graff-border);
+}
+.btn-graff-dark {
+  @include button-variant($btn-graff-dark-color, $btn-graff-dark-bg, $btn-graff-dark-border);
+}
 
 
 // Link buttons
