@@ -3,12 +3,7 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.11.1)
     colorator (1.1.0)
-    execjs (2.7.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18-x86-mingw32)
@@ -24,26 +19,17 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
-    jekyll-coffeescript (1.1.0)
-      coffee-script (~> 2.2)
-      coffee-script-source (~> 1.11.1)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
-    jekyll-gist (1.5.0)
-      octokit (~> 4.2)
     jekyll-github-metadata (2.9.4)
       jekyll (~> 3.1)
       octokit (~> 4.0, != 4.4.0)
-    jekyll-optional-front-matter (0.3.0)
-      jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
-    jekyll-readme-index (0.2.0)
-      jekyll (~> 3.0)
-    jekyll-relative-links (0.5.2)
-      jekyll (~> 3.3)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
-    jekyll-titles-from-headings (0.5.0)
+    jekyll-seo-tag (2.4.0)
+      jekyll (~> 3.3)
+    jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
@@ -80,15 +66,11 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.6.2)
-  jekyll-coffeescript
   jekyll-default-layout
-  jekyll-gist
   jekyll-github-metadata
-  jekyll-optional-front-matter
   jekyll-paginate
-  jekyll-readme-index
-  jekyll-relative-links
-  jekyll-titles-from-headings
+  jekyll-seo-tag
+  jekyll-sitemap
 
 BUNDLED WITH
    1.16.0
