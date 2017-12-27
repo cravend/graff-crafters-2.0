@@ -30,3 +30,16 @@ markdown:             kramdown
 sass:
   style: :compressed
 exclude: [node_modules]
+permalink: /:categories/:title/
+
+defaults:
+  -
+    scope:
+      path: "_posts/blog"
+    values:
+      category: "blog"
+  -
+    scope:
+      path: "projects"
+    values:
+      layout: "project"
