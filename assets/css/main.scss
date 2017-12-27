@@ -15,6 +15,7 @@ small {
 
 .container-fluid {
   padding: 0;
+  overflow-x: hidden !important;
 }
 
 .featurette-divider {
@@ -43,16 +44,56 @@ small {
   color: #0E1D33;
 }
 
+.featured-image {
+  max-height: 60vh;
+  margin-bottom: 0px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .fa {
   color: #89C3C7;
 }
+
+.marketing {
+  p {
+    font-size: 120%;
+  }
+  &.project {
+    padding-bottom: 30px;
+  }
+}
+
+#title-single {
+  text-align: center;
+  height: calc(40vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .featurette-heading {
+    margin-top: 10px;
+  }
+}
+
+#title {
+  text-align: center;
+  height: calc(40vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .featurette-heading {
+    margin-top: 10px;
+  }
+}
+
 #welcome {
   text-align: center;
   height: calc(40vh - 50px);
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   .featurette-heading {
     margin-top: 10px;
   }
