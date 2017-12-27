@@ -128,20 +128,25 @@
   .icon-prev,
   .icon-next,
   .glyphicon-chevron-left,
-  .glyphicon-chevron-right {
+  .glyphicon-chevron-right,
+  .fa-chevron-left,
+  .fa-chevron-right {
     position: absolute;
     top: 50%;
     margin-top: -10px;
     z-index: 5;
     display: inline-block;
+    color: white;
   }
   .icon-prev,
-  .glyphicon-chevron-left {
+  .glyphicon-chevron-left,
+  .fa-chevron-left {
     left: 50%;
     margin-left: -10px;
   }
   .icon-next,
-  .glyphicon-chevron-right {
+  .glyphicon-chevron-right,
+  .fa-chevron-right {
     right: 50%;
     margin-right: -10px;
   }
@@ -240,17 +245,21 @@
     .glyphicon-chevron-left,
     .glyphicon-chevron-right,
     .icon-prev,
-    .icon-next {
+    .icon-next,
+    .fa-chevron-left,
+    .fa-chevron-right {
       width: ($carousel-control-font-size * 1.5);
       height: ($carousel-control-font-size * 1.5);
       margin-top: ($carousel-control-font-size / -2);
       font-size: ($carousel-control-font-size * 1.5);
     }
     .glyphicon-chevron-left,
+    .fa-chevron-left,
     .icon-prev {
       margin-left: ($carousel-control-font-size / -2);
     }
     .glyphicon-chevron-right,
+    .fa-chevron-right,
     .icon-next {
       margin-right: ($carousel-control-font-size / -2);
     }
