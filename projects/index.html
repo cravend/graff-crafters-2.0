@@ -3,8 +3,19 @@ title: Projects
 layout: page
 ---
 
-{% for post in site.categories.projects %}
-<a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-  <h2>{{ post.title }}</h2>
-</a>
+{% capture count %}-1{% endcapture %}
+{% assign projects = "" | split: "," %}
+{% for project in site.pages %}
+    {% assign path = project.path | prepend: "/" %}
+    {% if path contains page.url %}
+    {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+    {% assign projects = projects | push: project %}
+    {% endif %}
+{% endfor %}
+{% assign projects = projects | shift | sort: 'date' | reverse %}
+
+{% for project in projects %}
+  <a class="post-title" href="{{ site.baseurl }}{{ project.url }}"><h2>{{ project.title }}</h2></a>
+  <h4>{% if project.date %}<i class="fa fa-calendar"></i> {{ project.date }}{% endif %} {% if project.location %}<i class="fa fa-map-marker"></i> {{ project.location }}{% endif %}</h4>
+  <p>{% if project.description %}{{ project.description }}{% else %}{{ project.content | truncate: 40 }}{% endif %}</p>
 {% endfor %}

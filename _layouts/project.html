@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div class="container-fluid">
+  {% capture count %}0{% endcapture %}
+  {% assign images = "" | split: "," %}
+  {% for image in site.static_files %}
+      {% if image.path contains page.url %}
+      {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+      {% assign images = images | push: image.path %}
+      {% endif %}
+  {% endfor %}
+  {% if images.size == 1 %}
+    <img src="{{ images }}" class="featured-image" alt="{{ page.title }} Image">
+  {% elsif images.size != 0 %}
+    <div id="myCarousel" class="carousel carousel-main slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        {% for image in images %}
+          <div class="item{% if forloop.first %} active{% endif %}">
+            <img src="{{ image }}" alt="{{ page.title }} Image {{ forloop.index }}">
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% capture dots %}{{ count | minus: '1' }}{% endcapture %}
+        {% for i in (0..dots) %}
+          <li data-target="#myCarousel" data-slide-to="{{ i }}"{% if forloop.first %} class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="fa fa-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="fa fa-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  {% endif %}
+</div>
+{% if images.size == 0 %}
+<div class="container-fluid">
+  <div id="title-single" class="featurette jumbotron">
+    <div>
+      <h2 class="featurette-heading">{{ page.title }}</h2>
+      <h4>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h4>
+    </div>
+  </div>
+</div>
+<div class="container marketing project">
+{% else %}
+<div class="container marketing project">
+  <div id="title" class="row featurette">
+    <div class="col-xs-12">
+      <h2 class="featurette-heading">{{ page.title }}</h2>
+      <h4>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h4>
+      <a href="#more" class="btn btn-lg btn-graff-dark" role="button">Read More</a>
+    </div>
+  </div>
+  {% endif %}
+  <div id="more">
+    {{ content }}
+  </div>
+</div>
