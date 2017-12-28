@@ -1,0 +1,32 @@
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      {% if include.header != null %}
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ include.header }}</h4>
+      </div>
+      {% endif %}
+      <div class="modal-body">
+        <p>{{ include.body }}</p>
+      </div>
+      <div class="modal-footer">
+        {% if include.button-class && include.button-text %}
+          <a type="button" class="btn btn-{{ include.button-class }}" href="{{ include.button-link | default: '#' }}">{{ include.button-text }}</a>
+        {% endif %}
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% if include.show == true %}
+<script type="text/javascript">
+  $(window).on('load',function(){
+      $('#myModal').modal('show');
+  });
+</script>
+{% endif %}
