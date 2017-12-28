@@ -6,6 +6,7 @@ $border         : #66b1b7;
 $dropDown       : true;
 .navbar-custom {
   background-color: $bgDefault;
+  border-bottom-width: 3px;
   border-color: $border;
   .navbar-brand {
     color: $colDefault;
