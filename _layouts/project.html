@@ -45,7 +45,7 @@ layout: default
 </div>
 {% if images.size == 0 %}
 <div class="container-fluid">
-  <div id="title-single" class="featurette jumbotron">
+  <div class="featurette jumbotron splash">
     <div>
       <h2 class="featurette-heading">{{ page.title }}</h2>
       <h4>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h4>
@@ -55,7 +55,7 @@ layout: default
 <div class="container marketing project">
 {% else %}
 <div class="container marketing project">
-  <div id="title" class="row featurette">
+  <div class="row featurette splash">
     <div class="col-xs-12">
       <h2 class="featurette-heading">{{ page.title }}</h2>
       <h4>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h4>

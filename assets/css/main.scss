@@ -17,6 +17,10 @@ small {
   overflow-x: hidden !important;
 }
 
+.footer {
+  padding-top: 50px;
+}
+
 .featurette-divider {
   margin: 80px 0;
 }
@@ -63,30 +67,7 @@ small {
   }
 }
 
-#title-single {
-  text-align: center;
-  height: calc(40vh - 50px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .featurette-heading {
-    margin-top: 10px;
-  }
-}
-
-#title {
-  text-align: center;
-  height: calc(40vh - 50px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .featurette-heading {
-    margin-top: 10px;
-  }
-}
-
-#welcome {
+.splash {
   text-align: center;
   height: calc(40vh - 50px);
   display: flex;
