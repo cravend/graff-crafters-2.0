@@ -5,7 +5,7 @@ title: About
 
 <div class="row featurette">
   <div class="col-md-3">
-    <h2 class="featurette-heading">Our Mission:</h2>
+    <h2 class="featurette-heading">Our<br>Mission:</h2>
   </div>
   <div class="col-md-9">
     <h3 class="featurette-heading">To honor God.</h3>
@@ -17,7 +17,7 @@ title: About
 
 <div class="row featurette">
   <div class="col-md-3">
-    <h2 class="featurette-heading">Our Goals:</h2>
+    <h2 class="featurette-heading">Our<br>Goals:</h2>
   </div>
   <div class="col-md-9">
     <h3 class="featurette-heading">To serve you.</h3>
@@ -27,20 +27,34 @@ title: About
 
 <hr class="featurette-divider">
 
-<div class="row featurette text-center">
+<div class="row featurette">
   <div class="col-sm-12 col-md-3 text-center-sm text-left-md">
-    <h2 class="featurette-heading">Our Staff:</h2>
+    <h2 class="featurette-heading">Our<br>Staff:</h2>
   </div>
-  <div class="col-md-9">
-    <img class="img-rounded" src="" alt="Andrew Graff" width="140" height="140">
-    <h2>Andrew Graff</h2>
-    <h4>Founder</h4>
-    <p class=" text-center-sm">Andrew Graff is an outgoing, down to earth, God loving man. He has an amazing work ethic. No job is too big nor too small. Andrew is one of the best people that you will find. He's well rounded and can do anything he puts his mind and heart to.</p>
-  </div>
-  <hr class="">
-  <div class="col-sm-9 col-sm-offset-3">
-    <p>The Graff Crafters was founded by Andrew Graff in 2017. thegraffcrafters.com was created by <a href="https://daltoncraven.tech">Dalton Craven</a>.</p>
-  </div>
+  {% for staff in site.data.staff limit: 1 %}
+    <div class="col-sm-9 staff-member text-center">
+      <img class="img-rounded" src="/assets/images/staff/{{ staff.picture }}" alt="{{ staff.name }}">
+      <h2>{{ staff.name }}</h2>
+      <h4>{{ staff.position }}</h4>
+      <p class="text-center-sm">{{ staff.bio }}</p>
+      {% unless forloop.last %}<hr class="featurette-divider">{% endunless %}
+    </div>
+
+  {% endfor %}
+  {% for staff in site.data.staff offset: 1 %}
+    {% capture onetwo %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="col-sm-6 staff-member text-center">
+      <img class="img-rounded" src="/assets/images/staff/{{ staff.picture }}" alt="{{ staff.name }}">
+      <h2>{{ staff.name }}</h2>
+      <h4>{{ staff.position }}</h4>
+      <p class="text-center-sm">{{ staff.bio }}</p>
+    </div>
+    {% if onetwo == 'even' %}
+    <div class="hidden-xs col-sm-12">
+      {% unless forloop.last %}<hr>{% endunless %}
+    </div>
+    {% endif %}
+  {% endfor %}
 </div>
 
 <hr class="featurette-divider">
