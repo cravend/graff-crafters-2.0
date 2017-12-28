@@ -1,16 +1,8 @@
 ---
 title: Projects
-layout: default
+layout: page
+subtitle: Our recent work
 ---
-<div class="container-fluid">
-  <div class="featurette jumbotron splash">
-    <div>
-      <h2 class="featurette-heading">{{ page.title }}</h2>
-      <h4>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h4>
-    </div>
-  </div>
-</div>
-<div class="container marketing">
 {% capture count %}-1{% endcapture %}
 {% assign projects = "" | split: "," %}
 {% for project in site.pages %}
@@ -27,4 +19,3 @@ layout: default
   <h4>{% if project.date %}<i class="fa fa-calendar"></i> {{ project.date }}{% endif %} {% if project.location %}<i class="fa fa-map-marker"></i> {{ project.location }}{% endif %}</h4>
   <p>{% if project.description %}{{ project.description }}{% else %}{{ project.content | truncate: 40 }}{% endif %}</p>
 {% endfor %}
-</div>
