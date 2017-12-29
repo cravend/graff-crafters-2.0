@@ -23,6 +23,14 @@ a {
   }
 }
 
+td, th {
+  padding: 2px 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
 @import "nav";
 @import "carousel";
 
