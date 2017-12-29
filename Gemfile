@@ -11,4 +11,5 @@ group :jekyll_plugins do
   # Optional plugins
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
+  gem "jekyll-feed"
 end

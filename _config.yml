@@ -30,6 +30,11 @@ sass:
 exclude: [node_modules]
 permalink: /:categories/:title/
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
 defaults:
   -
     scope:
