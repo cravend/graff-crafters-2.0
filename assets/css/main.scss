@@ -1,12 +1,23 @@
 ---
 ---
+$graff-light: #8AC2C7 !default;
+$graff-dark: #0E1E34 !default;
+$light-grey: #ECF0F1 !default;
+$grey: #333333 !default;
+
+$bgDefault: $graff-dark;
+$bgHighlight: $graff-dark;
+$colDefault: $light-grey;
+$colHighlight: $light-grey;
+$border: $graff-light;
+$dropDown: true;
 
 body {
   margin-top: 50px;
 }
 
 small {
-  color: #89C3C7 !important;
+  color: $graff-light !important;
 }
 
 @import "nav";
@@ -19,6 +30,9 @@ small {
 
 .footer {
   padding-top: 50px;
+  & a {
+    color: $graff-light;
+  }
 }
 
 .featurette-divider {
@@ -44,7 +58,7 @@ small {
 }
 
 .featurette-heading {
-  color: #0E1D33;
+  color: $graff-dark;
 }
 
 .featured-image {
@@ -55,7 +69,7 @@ small {
 }
 
 .fa {
-  color: #89C3C7;
+  color: $graff-light;
 }
 
 .marketing {
@@ -81,7 +95,7 @@ small {
 }
 
 .splash-color {
-  background-color: lighten(#66b1b7, 30%);
+  background-color: lighten($graff-light, 25%);
 }
 
 .staff-member {
