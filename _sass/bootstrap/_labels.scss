@@ -69,6 +69,6 @@ a.label {
   @include label-variant($label-graff-bg);
 }
 
-.label-graff {
+.label-graff-dark {
   @include label-variant($label-graff-dark-bg);
 }
