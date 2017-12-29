@@ -16,6 +16,6 @@ subtitle: Our recent work
 
 {% for project in projects %}
   <a class="post-title" href="{{ site.baseurl }}{{ project.url }}"><h2>{{ project.title }}</h2></a>
-  <h4>{% if project.date %}<i class="fa fa-calendar"></i> {{ project.date }}{% endif %} {% if project.location %}<i class="fa fa-map-marker"></i> {{ project.location }}{% endif %}</h4>
+  <h4>{% if project.date %}<i class="fa fa-calendar fa-color"></i> {{ project.date }}{% endif %} {% if project.location %}<i class="fa fa-map-marker fa-color"></i> {{ project.location }}{% endif %}</h4>
   <p>{% if project.description %}{{ project.description }}{% else %}{{ project.content | truncate: 40 }}{% endif %}</p>
 {% endfor %}
