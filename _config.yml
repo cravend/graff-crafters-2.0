@@ -24,7 +24,8 @@ description:           >- # this means to ignore newlines until "baseurl:"
   We are here to create artwork in everything we do where God's beauty, love, and power are radiated. While we are broken people, we serve a whole and ultimate God.
 
 baseurl:               "" # the subpath of your site, e.g. /blog
-url:                   "http://localhost:4000" # the base hostname & protocol for your site
+url:                   "https://dev.thegraffcrafters.com" # the base hostname & protocol for your site
+logo:                  "/assets/images/logo.png"
 markdown:              kramdown
 sass:
   style:               :compressed
