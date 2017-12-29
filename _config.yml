@@ -1,34 +1,35 @@
 # Required GitHub Pages Settings
-lsi:                  false
-safe:                 true
-incremental:          false
-highlighter:          rouge
+lsi:                   false
+safe:                  true
+incremental:           false
+highlighter:           rouge
 gist:
-  noscript:           false
+  noscript:            false
 kramdown:
-  math_engine:        mathjax
-  syntax_highlighter: rouge
+  math_engine:         mathjax
+  syntax_highlighter:  rouge
 
 # Optional GitHub Pages Settings
-encoding:             UTF-8
+encoding:              UTF-8
 kramdown:
-  input:              GFM
-  hard_wrap:          false
-future:               true
-jailed:               false
-gfm_quirks:           paragraph_end
-title:                Graff Crafters
-email:                thegraffcrafters@gmail.com
-description:          >- # this means to ignore newlines until "baseurl:"
+  input:               GFM
+  hard_wrap:           false
+future:                true
+jailed:                false
+gfm_quirks:            paragraph_end
+title:                 Graff Crafters
+author:                Andrew Graff
+email:                 thegraffcrafters@gmail.com
+description:           >- # this means to ignore newlines until "baseurl:"
   We are here to create artwork in everything we do where God's beauty, love, and power are radiated. While we are broken people, we serve a whole and ultimate God.
 
-baseurl:              "" # the subpath of your site, e.g. /blog
-url:                  "http://localhost:4000" # the base hostname & protocol for your site
-markdown:             kramdown
+baseurl:               "" # the subpath of your site, e.g. /blog
+url:                   "http://localhost:4000" # the base hostname & protocol for your site
+markdown:              kramdown
 sass:
-  style: :compressed
-exclude: [node_modules]
-permalink: /:categories/:title/
+  style:               :compressed
+exclude:               [node_modules]
+permalink:             /:categories/:title/
 
 plugins:
   - jekyll-seo-tag
@@ -38,11 +39,11 @@ plugins:
 defaults:
   -
     scope:
-      path: "_posts/blog"
+      path:            "_posts/blog"
     values:
-      category: "blog"
+      category:        "blog"
   -
     scope:
-      path: "projects"
+      path:            "projects"
     values:
-      layout: "project"
+      layout:          "project"
