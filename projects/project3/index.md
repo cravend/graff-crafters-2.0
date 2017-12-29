@@ -1,6 +1,6 @@
 ---
 title: third project
-date: 12-07-2000
+date: 2017-12-26
 location: Maineville, OH
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat gravida velit, et vehicula tellus rutrum sed. Sed in dui iaculis, egestas lacus vitae, varius ligula. Cras pretium dolor molestie eros consequat lacinia. Morbi nulla mi, dapibus vitae porta in, sollicitudin eu tellus. Pellentesque dignissim, nisi eget malesuada pharetra, elit lacus porttitor lectus, non feugiat lectus nisl ut nisl. Praesent auctor tellus sed libero cursus viverra. Donec ut ornare est. Ut ultricies lorem sed imperdiet finibus. Suspendisse fringilla lectus in tincidunt porta. In sit amet dui in nunc mollis posuere ac id tortor. Duis orci nunc, imperdiet in orci non, ultrices ultrices enim. Suspendisse at est ac mauris tristique tincidunt. Nullam finibus orci id diam pellentesque pharetra. Vestibulum venenatis libero et elementum viverra.

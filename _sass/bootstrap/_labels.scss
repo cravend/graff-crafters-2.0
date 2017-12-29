@@ -64,3 +64,11 @@ a.label {
 .label-danger {
   @include label-variant($label-danger-bg);
 }
+
+.label-graff {
+  @include label-variant($label-graff-bg);
+}
+
+.label-graff {
+  @include label-variant($label-graff-dark-bg);
+}
