@@ -7,24 +7,24 @@ title: Home
     <!-- Indicators -->
     <ol class="carousel-indicators">
       {% for feature in site.data.features %}
-        <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+      <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
       {% endfor %}
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
 
-        {% for feature in site.data.features %}
-          <div class="item{% if forloop.first %} active{% endif %}">
-            {% if feature.project %}
-            <a href="/projects/{{ feature.project }}">
-              <img src="{{ feature.url }}" alt="{{ feature.project }}">
-            </a>
-            {% else %}
-            <img src="{{ feature.url }}" alt="Graff Crafters Featured Project">
-            {% endif %}
-          </div>
-        {% endfor %}
+      {% for feature in site.data.features %}
+      <div class="item{% if forloop.first %} active{% endif %}">
+        {% if feature.project %}
+        <a href="/projects/{{ feature.project }}">
+          <img src="{{ feature.url }}" alt="{{ feature.project }}">
+        </a>
+        {% else %}
+        <img src="{{ feature.url }}" alt="Graff Crafters Featured Project">
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
 
     <!-- Left and right controls -->
@@ -43,52 +43,53 @@ title: Home
 <div class="container marketing">
   <div id="welcome" class="row featurette splash">
     <div class="col-xs-12">
-      <h1 class="featurette-heading">Building Bonds Through Hard Work</h1>
-      <!-- <p class="lead">The Graff Crafters</p> -->
+      <h1 class="featurette-heading">The Natural Choice for Landscaping</h1>
       <a href="#more" class="btn btn-lg btn-graff-dark" role="button">Learn More</a>
       <a href="/contact" class="btn btn-lg btn-graff" role="button">Contact Us</a>
     </div>
   </div>
-  <div id="more" class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Lawn Care. <small class="text-muted">It'll blow your mind.</small></h2>
-      <p class="lead">If you have a lawn, it needs maintained. Why not have it be the best it could be? We offer mowing services on a scheduled or one-time basis. We take pride in our work and will make sure your lawn is the best on the block.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive rounded" src="/assets/images/lawn.jpg" alt="Lawn">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
-      <h2 class="featurette-heading">Beautifying Beds. <small class="text-muted">Looks are everything.</small></h2>
-      <p class="lead">We also offer services for edging, pruining, trimming, sodding, minor tree removal, and mulching your yard, as well as extensive yard clean-ups. We can make your flower beds, sidewalks, driveways, and the outside of your house look astounding.</p>
-    </div>
-    <div class="col-md-5 col-md-pull-7">
-      <img class="featurette-image img-responsive rounded" src="/assets/images/mulch.jpg" alt="Mulch">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Decorative Stonework. <small class="text-muted">Hard-working your yard into something better.</small></h2>
-      <p class="lead">Our newest branch of the Graff Crafters, Hardscaping, satisfies your need for anything from putting a weed-free base around a tree to installing a full-on paver patio with decorative walls.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive rounded" src="/assets/images/tree.jpg" alt="Tree">
-    </div>
-  </div>
-
-    <div id="pow" class="row featurette splash">
-      <div class="col-xs-12">
-        <h1 class="featurette-heading">Sounds Good?</h1>
-        <p class="lead">Let's chat.</p>
-        <a href="/projects" class="btn btn-lg btn-graff-dark" role="button">See Our Work</a>
-        <a href="/contact" class="btn btn-lg btn-graff" role="button">Contact Us</a>
+  <div id="more">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Lawn Care. <small class="text-muted">It'll blow your mind.</small></h2>
+        <p class="lead">If you have a lawn, it needs maintained. Why not have it be the best it could be? We offer mowing services on a scheduled or one-time basis. We take pride in our work and will make sure your lawn is the best on the block.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive img-rounded" src="/assets/images/projects/carousel1.jpg" alt="Lawn">
       </div>
     </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">Beautifying Beds. <small class="text-muted">Looks are everything.</small></h2>
+        <p class="lead">We also offer services for edging, pruining, trimming, sodding, minor tree removal, and mulching your yard, as well as extensive yard clean-ups. We can make your flower beds, sidewalks, driveways, and the outside of your house look astounding.</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive img-rounded" src="/assets/images/mulch.jpg" alt="Mulch">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Decorative Stonework. <small class="text-muted">Hard-working your yard into something better.</small></h2>
+        <p class="lead">Our newest branch of the Graff Crafters, Hardscaping, satisfies your need for anything from putting a weed-free base around a tree to installing a full-on paver patio with decorative walls.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive img-rounded" src="/assets/images/tree.jpg" alt="Tree">
+      </div>
+    </div>
+  </div>
+
+  <div id="pow" class="row featurette splash">
+    <div class="col-xs-12">
+      <h1 class="featurette-heading">Sounds Good?</h1>
+      <p class="lead">Let's chat.</p>
+      <a href="/projects" class="btn btn-lg btn-graff-dark" role="button">See Our Work</a>
+      <a href="/contact" class="btn btn-lg btn-graff" role="button">Contact Us</a>
+    </div>
+  </div>
 </div>
