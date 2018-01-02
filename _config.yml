@@ -61,6 +61,6 @@ defaults:
       category:        "blog"
   -
     scope:
-      path:            "projects"
+      path:            "portfolio"
     values:
       layout:          "project"
