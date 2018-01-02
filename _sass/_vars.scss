@@ -1,0 +1,30 @@
+$graff-light-old: #8AC2C7 !default;
+$graff-light-green: #AED4AE !default;
+$graff-dark-green: #175E17 !default;
+$graff-navy: #0E1E34 !default;
+$light-grey: #ECF0F1 !default;
+$grey: #333333 !default;
+$graff-bright: #71F79F !default;
+$graff-dim: #45A379 !default;
+$forest-green: #228B22 !default;
+
+$graff-dark: $graff-navy;
+$graff-light: $graff-bright;
+$bgDefault: $graff-navy;
+$bgHighlight: $graff-navy;
+$colDefault: $light-grey;
+$colHighlight: $light-grey;
+$border: $graff-dark-green;
+$dropDown: true;
+
+$btn-graff-color: $light-grey;
+$btn-graff-bg: $graff-dark-green;
+$btn-graff-border: $graff-navy;
+$btn-graff-dark-color: $light-grey;
+$btn-graff-dark-bg: $graff-navy;
+$btn-graff-dark-border: $graff-dark-green; //** Graff label background color
+$label-graff-bg: $graff-dark-green;
+$label-graff-dark-bg: $graff-navy;
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$headings-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$headings-font-weight: 400 !default;
