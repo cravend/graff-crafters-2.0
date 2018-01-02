@@ -6,5 +6,7 @@ main:
     url: /about
   - title: Projects
     url: /projects
-  - title: Contact
-    url: /contact
+  # - title: Contact
+  #   url: /contact
+  #   featured: true
+  #   right: true
