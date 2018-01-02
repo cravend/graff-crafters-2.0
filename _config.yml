@@ -1,7 +1,6 @@
 # Required GitHub Pages Settings
 lsi:                   false
 safe:                  true
-incremental:           false
 highlighter:           rouge
 gist:
   noscript:            false
@@ -33,10 +32,27 @@ exclude:               [node_modules]
 permalink:             /:categories/:title/
 
 plugins:
+  # REQUIRED
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-remote-theme
+
+  # OPTIONAL
+  # - jekyll-feed
+  # - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
-
+  # - jekyll-avatar
+  - jemoji
+  # - jekyll-mentions
 defaults:
   -
     scope:
