@@ -2,13 +2,13 @@ source "https://rubygems.org"
 group :jekyll_plugins do
   # REQUIRED
   gem "jekyll", "3.6.2"
-  gem "jekyll-sass-converter",   "1.5.0"
-  gem "kramdown",                "1.14.0"
+  gem "jekyll-sass-converter", "1.5.0"
+  gem "kramdown", "1.14.0"
   gem "liquid", "4.0.0"
-  gem "rouge",  "2.2.1"
+  gem "rouge", "2.2.1"
   gem "github-pages-health-check", "1.3.5"
   gem "listen", "3.0.6"
-  gem "activesupport",           "4.2.9"
+  gem "activesupport",  "4.2.9"
 
   gem "jekyll-coffeescript", "1.0.2"
   gem "jekyll-commonmark-ghpages", "0.1.3"
