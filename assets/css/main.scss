@@ -30,7 +30,15 @@ img {
 }
 
 .footer {
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  color: $light-grey !important;
+  background-color: $graff-navy;
+  font-size: 110%;
+  a, a:hover, a:active, a:focus {
+    color: $graff-light-green;
+    // text-style: underline;
+  }
 }
 
 .featurette-divider {
@@ -79,6 +87,9 @@ img {
   &.project {
     padding-top: 30px;
   }
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .splash {
