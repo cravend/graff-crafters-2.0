@@ -3,40 +3,39 @@ layout: page
 title: Contact
 ---
 <form id="contact">
-  <fieldset disabled>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <h4>First Name <span class="req">*</span></h4>
-            <input type="text" name="firstname" id="firstname" class="form-control" required>
-          </div>
-          <div class="col-md-6 form-group">
-            <h4>Last Name <span class="req">*</span></h4>
-            <input type="text" name="lastname" id="lastname" class="form-control" required>
-          </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <h4>First Name <span class="req">*</span></h4>
+          <input type="text" name="firstname" id="firstname" class="form-control" required>
         </div>
-        <div class="form-group">
-          <h4>Email <span class="req">*</span></h4>
-          <input type="email" name="email" id="email" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <h4>Subject <span class="req">*</span></h4>
-          <input type="text" name="subject" id="subject" class="form-control" required>
+        <div class="col-md-6 form-group">
+          <h4>Last Name <span class="req">*</span></h4>
+          <input type="text" name="lastname" id="lastname" class="form-control" required>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <h4>Message <span class="req">*</span></h4>
-          <textarea name="message" id="message" class="form-control" rows="10" required></textarea>
-        </div>
+      <div class="form-group">
+        <h4>Email <span class="req">*</span></h4>
+        <input type="email" name="email" id="email" class="form-control" required>
       </div>
-      <div class="col-md-6">
-        <input type="submit" class="btn btn-graff btn-lg" value="Submit">
+      <div class="form-group">
+        <h4>Subject <span class="req">*</span></h4>
+        <input type="text" name="subject" id="subject" class="form-control" required>
       </div>
     </div>
-  </fieldset>
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Message <span class="req">*</span></h4>
+        <textarea name="message" id="message" class="form-control" rows="10" required></textarea>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <input type="submit" class="btn btn-graff btn-lg" value="Submit">
+    </div>
+  </div>
 </form>
-
-{% include modal.html show=true body="We're sorry, but our contact form is still a work in progress. If you need to contact us, please email us at <a href='mailto:graffcrafters@gmail.com'>graffcrafters@gmail.com</a>. Thanks!" button-class="graff" button-text="Back to Home" button-link="/" %}
+{% comment %}
+{% include modal.html show=false body="We're sorry, but our contact form is still a work in progress. If you need to contact us, please email us at <a href='mailto:graffcrafters@gmail.com'>graffcrafters@gmail.com</a>. Thanks!" button-class="graff" button-text="Back to Home" button-link="/" %}
 <script src="submit.js"></script>
+{% endcomment %}

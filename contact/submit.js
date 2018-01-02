@@ -14,7 +14,7 @@ $("#contact").submit(function(event) {
 
     var serializedData = $form.serialize();
 
-    var urls = ['https://hooks.zapier.com/hooks/catch/2245471/9hmndp/', 'https://hooks.zapier.com/hooks/catch/2245471/5ez2g5/'];
+    var urls = ['https://hooks.zapier.com/hooks/catch/2245471/5ez2g5', 'https://hooks.zapier.com/hooks/catch/2245471/9hmndp/'];
 
     $.each(urls, function(i, u) {
         $.ajax(u, {
@@ -33,7 +33,7 @@ $("#contact").submit(function(event) {
     //     window.location = 'thanks.html';
 
     // } else {
-        window.location = 'thanks.html';
+        window.location = 'thanks';
     // }
     $inputs.prop("disabled", false);
 
