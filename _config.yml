@@ -59,6 +59,12 @@ defaults:
       path:            "_posts/blog"
     values:
       category:        "blog"
+
+  -
+    scope:
+      path:            "portfolio"
+    values:
+      layout:        "portfolio"
   -
     scope:
       path:            "project"

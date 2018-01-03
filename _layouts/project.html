@@ -43,19 +43,8 @@ layout: default
     </div>
   {% endif %}
 </div>
-{% if images.size == 0 %}
 <div class="container-fluid">
-  <div class="featurette jumbotron splash splash-color">
-    <div>
-      <h2 class="featurette-heading">{{ page.title }}</h2>
-      <h3>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h3>
-      <h4>{% for category in page.categories %} <span class="label label-graff"><a href="/portfolio/{{category}}">{{ category }}</a></span>{% endfor %}</h4>
-    </div>
-  </div>
-</div>
-{% else %}
-<div class="container-fluid">
-  <div class="row featurette splash">
+  <div class="row featurette splash splash-color">
     <div class="col-xs-12">
       <h2 class="featurette-heading">{{ page.title }}</h2>
       <h3>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h3>
@@ -63,7 +52,6 @@ layout: default
     </div>
   </div>
 </div>
-{% endif %}
 <div class="container marketing project">
   <div id="more">
     {{ content }}

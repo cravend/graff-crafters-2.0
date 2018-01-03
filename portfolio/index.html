@@ -1,0 +1,31 @@
+---
+title: Our Work
+layout: page
+subtitle: Planned, planted, photographed
+---
+{% capture count %}-1{% endcapture %}
+{% assign portfolios = "" | split: "," %}
+{% for portfolio in site.pages %}
+  {% if portfolio.path contains "portfolio" %}
+    {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+    {% assign portfolios = portfolios | push: portfolio %}
+  {% endif %}
+{% endfor %}
+{% assign portfolios = portfolios | shift | sort: 'date' | reverse %}
+<div class="row">
+  {% for portfolio in portfolios %}
+  <!-- tile -->
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img class="" src="{{ portfolio.image }}" alt="{{ portfolio.title }}" style="width:100%">
+      <div class="caption">
+        <a class="post-title" href="{{ site.baseurl }}{{ portfolio.url }}"><h2>{{ portfolio.title }}</h2></a>
+        <h4>{{ portfolio.description }}</h4>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="clearfix"></div>
+<hr>
+<h2 class="text-center"><a href="/project">View All Projects</a></h2>
