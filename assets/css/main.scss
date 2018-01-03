@@ -76,8 +76,15 @@ img {
   object-fit: cover;
 }
 
+.label-graff a {
+  color: white;
+}
+
 .fa-color {
-  color: $graff-light-green;
+  color: $light-grey;
+  &:hover, &:active, &:focus {
+    color: $light-grey;
+  }
 }
 
 .marketing {

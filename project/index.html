@@ -1,0 +1,21 @@
+---
+title: All Projects
+layout: page
+subtitle: Planned, planted, photographed
+---
+{% capture count %}-1{% endcapture %}
+{% assign portfolio = "" | split: "," %}
+{% for project in site.pages %}
+    {% assign path = project.path | prepend: "/" %}
+    {% if path contains page.url %}
+    {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+    {% assign portfolio = portfolio | push: project %}
+    {% endif %}
+{% endfor %}
+{% assign portfolio = portfolio | shift | sort: 'date' | reverse %}
+
+{% for project in portfolio %}
+  <a class="post-title" href="{{ site.baseurl }}{{ project.url }}"><h2>{{ project.title }}</h2></a>
+  <h4>{% if project.date %}<i class="fa fa-calendar fa-color"></i> {{ project.date | date: "%m/%d/%Y" }}{% endif %} {% if project.location %}<i class="fa fa-map-marker fa-color"></i> {{ project.location }}{% endif %}{% for category in project.categories %} <span class="label label-graff"><a href="/portfolio/{{category}}">{{ category }}</a></span>{% endfor %}</h4>
+  <p>{% if project.description %}{{ project.description }}{% else %}{{ project.content | truncate: 40 }}{% endif %}</p>
+{% endfor %}
