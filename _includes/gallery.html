@@ -1,0 +1,37 @@
+{% capture count %}0{% endcapture %}
+{% assign images = "" | split: "," %}
+{% for image in site.static_files %}
+{% if image.path contains include.path %}
+{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+{% assign images = images | push: image %}
+{% endif %}
+{% endfor %}
+{% if images.size != 0 %}
+<hr>
+<h2>Project Pictures</h2>
+<div class="gallery">
+  <div class="row">
+    {% for image in images %}
+    <div class="col-xs-6 col-sm-4 col-md-3 gallery-item">
+      <a href="#" data-toggle="modal" data-target=".modal-{{ forloop.index }}">
+        <img src="{{ image.path }}" class="img-responsive img-thumbnail" alt="{{ page.title }} Image {{ forloop.index }}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% for image in images %}
+<div class="modal fade modal-{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="{{ image.path }}" class="img-responsive img-rounded center-block" alt="{{ page.title }} Image {{ forloop.index }}">
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
