@@ -17,7 +17,7 @@ title: Home
       {% for feature in site.data.features %}
       <div class="item{% if forloop.first %} active{% endif %}">
         {% if feature.project %}
-        <a href="/projects/{{ feature.project }}">
+        <a href="/portfolio/{{ feature.project }}">
           <img src="{{ feature.url }}" alt="{{ feature.project }}">
         </a>
         {% else %}
