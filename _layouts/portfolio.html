@@ -10,5 +10,13 @@ layout: default
   </div>
 </div>
 <div class="container marketing">
-  {{ content }}
+  {% assign portfolio = "" | split: "," %}
+  {% for project in site.pages %}
+    {% if project.categories contains page.title %}
+      {% assign portfolio = portfolio | push: project %}
+    {% endif %}
+  {% endfor %}
+  {% assign portfolio = portfolio | sort: 'date' | reverse %}
+
+  {% include list-projects.html %}
 </div>

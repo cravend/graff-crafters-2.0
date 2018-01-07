@@ -7,14 +7,78 @@ layout: default
   <div class="row featurette splash splash-color">
     <div class="col-xs-12">
       <h2 class="featurette-heading">{{ page.title }}</h2>
-      <h3>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h3>
-      {% for category in page.categories %} <span style="font-size: 120%" class="label label-graff h2"><a href="/portfolio/{{category}}">{{ category }}</a></span>{% endfor %}
+      <h3>{% if page.date %}<i class="fa fa-calendar"></i> {{ page.date | date: "%m/%d/%Y" }}{% endif %} {% if page.location %}<i class="fa fa-map-marker"></i> {{ page.location }}{% endif %}</h3>
+      {% for category in page.categories %} <span style="font-size: 120%" class="label label-graff h2"><a href="/portfolio/{{ category | slugify }}">{{ category }}</a></span>{% endfor %}
     </div>
   </div>
 </div>
 <div class="container marketing project">
   <div id="more">
-    {{ content }}
+    {% if page.description %}
+    <h2 id="overview">OVERVIEW</h2>
+    <p>{{ page.description }}</p>
+    {% endif %}
+
+    {% if page.goals[1] %}
+    <h2 id="goals">GOALS</h2>
+    <ul>
+      {% for goal in page.goals %}
+      <li><p>{{ goal }}</p></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h2 id="goals">GOALS</h2>
+    <p>{{ page.goals }}</p>
+    {% endif %}
+
+    <h2 id="specifications">SPECIFICATIONS</h2>
+
+    {% if page.price[1] %}
+    <h3 id="price">PRICE</h3>
+    <ul>
+      {% for price in page.price %}
+      <li><p>{{ price }}</p></li>
+      {% endfor %}
+    </ul>
+    {% elsif page.price %}
+    <h3 id="price">PRICE</h3>
+    <p>{{ page.price }}</p>
+    {% endif %}
+
+    {% if page.materials[1] %}
+    <h3 id="materials-needed">MATERIALS NEEDED</h3>
+    <ul>
+      {% for material in page.materials %}
+      <li><p>{{ material }}</p></li>
+      {% endfor %}
+    </ul>
+    {% elsif page.materials %}
+    <h3 id="materials-needed">MATERIALS NEEDED</h3>
+    <p>{{ page.materials }}</p>
+    {% endif %}
+
+    {% if page.equipment[1] %}
+    <h3 id="equipment-needed">EQUIPMENT NEEDED</h3>
+    <ul>
+      {% for equipment in page.equipment %}
+      <li><p>{{ equipment }}</p></li>
+      {% endfor %}
+    </ul>
+    {% elsif page.equipment %}
+    <h3 id="equipment-needed">EQUIPMENT NEEDED</h3>
+    <p>{{ page.equipment }}</p>
+    {% endif %}
+
+    {% if page.hours %}
+    <h3 id="estimated-work-hours">ESTIMATED WORK HOURS</h3>
+    <p>{{ page.hours }}</p>
+    {% endif %}
+
+    {% if page.notes %}
+    <h2 id="notes">NOTES</h2>
+    <p>{{ page.notes }}</p>
+    {% endif %}
+
   </div>
   {% include gallery.html path=page.dir %}
 </div>
