@@ -1,5 +1,4 @@
-- url: /project/project1/carousel2.jpg
-  project: project1
-- url: /project/project2/carousel1.jpg
-  project: project2
-- url: /project/project1/carousel3.jpg
+- url: /assets/images/projects/carousel1.jpg
+- url: /assets/images/projects/carousel2.jpg
+  project: mitchell-spring-maintenance
+- url: /assets/images/projects/carousel3.jpg
