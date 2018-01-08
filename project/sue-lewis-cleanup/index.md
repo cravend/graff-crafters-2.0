@@ -3,7 +3,7 @@ title: Sue Lewis Cleanup and Restoration
 date: 2017-06-12
 description: Large build up of weeds. Heavy layer preen needed to combat weed germination before mulch was applied.
 categories:
-- Spring Cleanup
+- Mulching
 goals:
 - Clean out beds
 - Weed beds

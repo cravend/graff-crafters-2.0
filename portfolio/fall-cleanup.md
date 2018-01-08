@@ -1,5 +1,5 @@
 ---
 title: Fall Cleanup
-description: Fall clean-up was super cool!
-image: /assets/images/projects/carousel1.jpg
+description: A collection of the projects we did in preparation for winter.
+image: /project/worcester-fall-cleanup/image1.jpg
 ---
