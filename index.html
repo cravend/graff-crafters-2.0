@@ -18,10 +18,10 @@ title: Home
       <div class="item{% if forloop.first %} active{% endif %}">
         {% if feature.project %}
         <a href="/project/{{ feature.project }}">
-          <img src="{{ feature.url }}" alt="{{ feature.project }}">
+          <img class="slides" src="{{ feature.url }}" alt="{{ feature.project }}">
         </a>
         {% else %}
-        <img src="{{ feature.url }}" alt="Graff Crafters Featured Project">
+        <img class="slides" src="{{ feature.url }}" alt="Graff Crafters Featured Project">
         {% endif %}
       </div>
       {% endfor %}
