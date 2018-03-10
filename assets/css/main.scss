@@ -113,7 +113,7 @@ footer {
 
 .splash {
   text-align: center;
-  height: calc(40vh - 50px);
+  min-height: calc(40vh - 50px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,6 +137,10 @@ footer {
     width: 140px;
     height: 140px;
   }
+}
+
+#pow {
+  padding-top: 10px;
 }
 
 @import "media";
